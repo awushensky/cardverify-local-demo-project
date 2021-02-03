@@ -1,13 +1,12 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    ext.kotlin_version = "1.3.72"
     repositories {
         google()
         jcenter()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:4.0.1"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.android.tools.build:gradle:4.1.1"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.21"
 
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -17,19 +16,43 @@ buildscript {
 
 allprojects {
     repositories {
-//        mavenLocal()
+        mavenLocal()
         google()
         jcenter()
         flatDir {
             dirs 'libs'
         }
-        maven {
-            url "https://bouncerpaid.bintray.com/cardverify-ui-local-android"
-            credentials {
-                username "<YOUR_BINTRAY_USERNAME_HERE>"
-                password "<YOUR_BINTRAY_PASSWORD_HERE>"
-            }
-        }
+//        maven {
+//            url "https://bouncerpaid.bintray.com/cardverify-ui-local-android"
+//            credentials {
+//                username "doordash@bouncerpaid"
+//                password "e547ee526b4cd44e99e2d5c1bb2fe76aab7a15d2"
+//            }
+//        }
+//        maven {
+//            url "https://bouncerpaid.bintray.com/cardverify-ui-local-android"
+//            credentials {
+//                username "localtest@bouncerpaid"
+//                password "9026864821782545cffbb4a27e3baeb4540d985c"
+//            }
+//        }
+//        maven {
+//            url "https://bouncerpaid.bintray.com/cardverify-ui-android"
+//            credentials {
+//                username "localtest@bouncerpaid"
+//                password "9026864821782545cffbb4a27e3baeb4540d985c"
+//            }
+//        }
+//        maven {
+//            url "https://bouncerpaid.bintray.com/liveness-ui-android"
+//            credentials {
+//                username "localtest@bouncerpaid"
+//                password "9026864821782545cffbb4a27e3baeb4540d985c"
+//            }
+//        }
+//        maven {
+//            url "https://bouncerpaid.bintray.com/cardscan-android"
+//        }
     }
 }
 

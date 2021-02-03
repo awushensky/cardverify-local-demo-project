@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Local Tester</string>
+    <string name="bouncer_card_scan_instructions">PUT YOUR CARD THERE WOAH</string>
 </resources>

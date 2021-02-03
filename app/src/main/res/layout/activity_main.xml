@@ -16,16 +16,46 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/cardverifyButton" />
+        app:layout_constraintBottom_toTopOf="@id/cardverifyButtonLocal" />
 
     <Button
-        android:id="@+id/cardverifyButton"
+        android:id="@+id/cardverifyButtonLocal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CardVerify 2.0"
+        android:text="CardVerify 2.0 Local"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cardscanButton"
+        app:layout_constraintBottom_toTopOf="@id/cardverifyButtonNetwork" />
+
+    <Button
+        android:id="@+id/cardverifyButtonNetwork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CardVerify 2.0 Network"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardverifyButtonLocal"
+        app:layout_constraintBottom_toTopOf="@id/cardverifyButtonZeroFraud" />
+
+    <Button
+        android:id="@+id/cardverifyButtonZeroFraud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CardVerify 2.0 Zero Fraud"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardverifyButtonNetwork"
+        app:layout_constraintBottom_toTopOf="@id/livenessButton" />
+
+    <Button
+        android:id="@+id/livenessButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Liveness 2.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardverifyButtonZeroFraud"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
